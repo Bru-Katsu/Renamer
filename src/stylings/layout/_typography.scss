@@ -1,0 +1,29 @@
+@use 'colors' as colors;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap');
+
+p {
+    line-height: 1.6;
+}
+
+.section-title {
+    font-family: 'Poppins';
+    font-size: 28px;
+
+    margin-top: unset;
+
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+
+    &::after {
+        display: block;
+        content: "";
+        width: 4.5rem;
+        height: 0.4375rem;
+        background-color: colors.$primary;
+    }
+
+    &.reversed {
+        align-items: flex-end;
+    }
+}

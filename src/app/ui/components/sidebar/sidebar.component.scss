@@ -1,0 +1,34 @@
+@use 'colors' as colors;
+
+$sidebar-max-size: 300px;
+$sidebar-min-size: 150px;
+
+.sidebar-menu {
+    height: 100%;
+    width: $sidebar-min-size;
+
+    transition: .2s;
+
+    &.active {
+        width: $sidebar-max-size;
+    }
+}
+
+.content {
+    height: 100%;
+    width: calc(100% - $sidebar-min-size);
+
+    background-color: colors.$dark-100;
+
+    transition: .2s;
+
+    &.active {
+        width: calc(100% - $sidebar-max-size);
+    }
+}
+
+:host {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}

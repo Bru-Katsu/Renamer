@@ -1,0 +1,19 @@
+@use 'colors' as colors;
+
+button.btn {
+    border-radius: 8px;
+    height: 2.5rem;
+    padding: 0rem 1rem;
+
+    color: colors.$light;
+
+    font-weight: bold;
+    font-family: 'Roboto';
+
+    cursor: pointer;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}

@@ -1,0 +1,39 @@
+@use 'colors' as colors;
+
+.tooltip-container {
+    text-align: center;
+    z-index: 100;
+    position: fixed;
+    padding: 6px 12px;
+
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.01rem;
+    line-height: initial;
+
+    color: colors.$light;
+    background: colors.$dark-100;
+
+    width: auto;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    opacity: 0;
+    transform: translate(-50%, -30%);
+    
+    animation: tooltip-slide 0.18s ease-out 0.2s;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+}
+
+@keyframes tooltip-slide {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

@@ -33,6 +33,15 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/stylings/base",
+                "src/stylings/components",
+                "src/stylings/layout",
+                "src/stylings/utils",
+                "src/stylings/variables"
+              ]
+            },
             "styles": [
               "src/styles.scss"
             ],
@@ -151,6 +160,15 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/stylings/base",
+                "src/stylings/components",
+                "src/stylings/layout",
+                "src/stylings/utils",
+                "src/stylings/variables"
+              ]
+            },
             "customWebpackConfig": {
               "path": "./angular.webpack.js",
               "replaceDuplicatePlugins": true

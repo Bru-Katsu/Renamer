@@ -1,0 +1,84 @@
+@use 'breakpoints' as breakpoints;
+
+$container-max-width: 1200px;
+$container-width: 80%;
+$gutter: 24px;
+
+$maximum-columns: 12;
+
+@mixin responsive($device) {
+    @if $device == xl {
+        @media screen and (min-width: breakpoints.$breakpoint-xl) {
+            @content;
+        }
+    }
+
+    @else if $device == l {
+        @media screen and (max-width: breakpoints.$breakpoint-xl) and (min-width: breakpoints.$breakpoint-lg) {
+            @content;
+        }
+    }
+
+    @else if $device == m {
+        @media screen and (max-width: breakpoints.$breakpoint-lg) and (min-width: breakpoints.$breakpoint-md) {
+            @content;
+        }
+    }
+
+    @else if $device == s {
+        @media screen and (max-width: breakpoints.$breakpoint-md) {
+            @content;
+        }
+    }
+
+    @else if $device == xs {
+        @media screen and (max-width: breakpoints.$breakpoint-sm) {
+            @content;
+        }
+    }
+}
+
+.container {
+    width: min($container-width, $container-max-width);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: $gutter;
+
+    width: 100%;
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .col {
+        float: left;
+        margin: 0.5rem 0rem;
+        min-height: 0.125rem;
+    }
+}
+
+@function grid($col) {
+    @return ($col / $maximum-columns) * 100%;
+}
+
+@for $index from 1 through $maximum-columns {
+
+    .col-#{$index} {
+        width: calc(grid($index) - $gutter);
+
+        @include responsive(s) {
+            width: calc(100%);
+        }
+    }
+}

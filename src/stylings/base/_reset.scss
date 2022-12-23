@@ -1,0 +1,28 @@
+@use 'colors' as colors;
+
+ul {
+    list-style-type: none;
+}
+
+html, body {
+    margin: unset;
+}
+
+button {
+    border: unset;
+}
+
+input[disabled],
+button[disabled] {
+  pointer-events: none;
+}
+
+::-moz-selection {
+    color: colors.$dark-100;
+    background: colors.$primary;
+}
+  
+::selection {
+    color: colors.$dark-100;
+    background: colors.$primary;
+}

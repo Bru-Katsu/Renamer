@@ -1,0 +1,9 @@
+<div class="sidebar-menu toolbar-frame"  [ngClass]="{'active': !isCompact}">
+    <button class="toggle-nav" (click)="toggle()">
+        Toggle
+    </button>
+    <ng-content select="[sidebar]"></ng-content>
+</div>
+<div class="content" [ngClass]="{'active': !isCompact}">
+    <ng-content select="[router]"></ng-content>
+</div>
