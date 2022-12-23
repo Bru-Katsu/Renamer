@@ -1,16 +1,19 @@
 @use 'colors' as colors;
 
 button.btn {
-    border-radius: 8px;
-    height: 2.5rem;
+    border-radius: 6px;
+    height: 2rem;
     padding: 0rem 1rem;
-
-    color: colors.$light;
 
     font-weight: bold;
     font-family: 'Roboto';
 
     cursor: pointer;
+}
+
+button.btn.primary{
+    color: colors.$light;
+    background-color: colors.$primary;
 }
 
 .btn-group {
