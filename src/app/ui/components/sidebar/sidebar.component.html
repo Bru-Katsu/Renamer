@@ -1,5 +1,5 @@
-<div class="sidebar-menu toolbar-frame"  [ngClass]="{'active': !isCompact}">
-    <button class="toggle-nav" (click)="toggle()">
+<div class="sidebar-menu"  [ngClass]="{'active': !isCompact}">
+    <button type="button" class="btn primary" (click)="toggle()">
         Toggle
     </button>
     <ng-content select="[sidebar]"></ng-content>

@@ -1,11 +1,13 @@
 @use 'colors' as colors;
 
 $sidebar-max-size: 300px;
-$sidebar-min-size: 150px;
+$sidebar-min-size: 100px;
 
 .sidebar-menu {
-    height: 100%;
+    padding: 1rem;
     width: $sidebar-min-size;
+
+    background-color: colors.$dark2-80;
 
     transition: .2s;
 
@@ -15,7 +17,6 @@ $sidebar-min-size: 150px;
 }
 
 .content {
-    height: 100%;
     width: calc(100% - $sidebar-min-size);
 
     background-color: colors.$dark-100;
