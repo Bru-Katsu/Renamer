@@ -1,2 +1,27 @@
 @use 'colors' as colors;
 
+//reset
+input, textarea {
+    all: unset;
+}
+
+//estilização
+.form-control {
+    border-radius: .25rem;
+    border: unset;
+
+    background-color: colors.$control-background;
+    color: colors.$control-content;
+
+    min-height: 1.75rem;
+    padding: 0 .75rem;
+    
+    font-weight: bold;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Roboto';
+    
+    &:focus {
+        color: colors.$light;
+    }
+}

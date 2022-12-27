@@ -1,9 +1,9 @@
-<div class="sidebar-menu"  [ngClass]="{'active': !isCompact}">
+<aside class="sidebar-menu" [ngClass]="{'active': !isCompact}">
     <button type="button" class="btn primary" (click)="toggle()">
         Toggle
     </button>
-    <ng-content select="[sidebar]"></ng-content>
-</div>
-<div class="content" [ngClass]="{'active': !isCompact}">
-    <ng-content select="[router]"></ng-content>
-</div>
+    <ng-content select="[menu]"></ng-content>
+</aside>
+<main class="content" [ngClass]="{'active': !isCompact}">
+    <ng-content select="[content]"></ng-content>
+</main>
